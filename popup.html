@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TabMind</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">tab<span>mind</span></div>
+    <button id="btn-ai" class="btn-primary">✦ AI sort</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-n" id="s-open">0</div>
+      <div class="stat-l">open</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n red" id="s-norea">0</div>
+      <div class="stat-l">no reason</div>
+    </div>
+    <div class="stat">
+      <div class="stat-n green" id="s-done">0</div>
+      <div class="stat-l">done</div>
+    </div>
+  </div>
+
+  <!-- AI key prompt (hidden by default) -->
+  <div id="key-prompt" class="key-prompt hidden">
+    <p>Paste your Groq API key to enable AI grouping. Free at console.groq.com</p>
+    <input type="password" id="api-key-input" placeholder="gsk_..." />
+    <button id="save-key-btn" class="btn-primary" style="width:100%;margin-top:6px">save key & sort</button>
+  </div>
+
+  <!-- AI loading state -->
+  <div id="ai-loading" class="ai-loading hidden">
+    <div class="spinner"></div> grouping by urgency…
+  </div>
+
+  <!-- Tab list -->
+  <div id="tab-list"></div>
+
+  <!-- Bottom bar -->
+  <div class="footer">
+    <button id="btn-pause" class="btn-ghost">pause prompts</button>
+    <button id="btn-clear" class="btn-ghost">clear done</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

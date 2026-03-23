@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "TabMind",
+  "version": "1.0.0",
+  "description": "Remembers why you opened every tab.",
+  "permissions": ["tabs", "storage", "scripting"],
+  "host_permissions": [
+    "<all_urls>",
+    "https://api.groq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TabMind"
+  }
+}
