@@ -35,7 +35,7 @@
 4. Click **✦ AI sort** → Enter your Groq API key (free at console.groq.com) to let AI intelligently group your open tabs into real Chrome Tab Groups
 
 ## 🛠 Project Structure
-
+```
 TabMind/
 ├── manifest.json
 ├── background.js
@@ -44,6 +44,7 @@ TabMind/
 ├── popup.js
 ├── popup.css           # Lavender Dream theme
 └── README.md
+```
 
 ## 🎨 Design
 
