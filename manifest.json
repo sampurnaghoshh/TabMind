@@ -1,18 +1,30 @@
 {
   "manifest_version": 3,
   "name": "TabMind",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Remembers why you opened every tab.",
-  "permissions": ["tabs", "storage", "scripting"],
-  "host_permissions": [
-    "<all_urls>",
-    "https://api.groq.com/*"
-  ],
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_title": "TabMind"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M",
+        "mac": "Command+Shift+M"
+      }
+    }
   }
 }

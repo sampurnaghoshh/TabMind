@@ -27,25 +27,26 @@
     </div>
   </div>
 
-  <!-- AI key prompt (hidden by default) -->
+  <!-- AI key prompt -->
   <div id="key-prompt" class="key-prompt hidden">
-    <p>Paste your Groq API key to enable AI grouping. Free at console.groq.com</p>
+    <p>Paste your Groq API key to enable AI grouping.<br>Free at console.groq.com</p>
     <input type="password" id="api-key-input" placeholder="gsk_..." />
-    <button id="save-key-btn" class="btn-primary" style="width:100%;margin-top:6px">save key & sort</button>
+    <button id="save-key-btn" class="btn-primary" style="width:100%; margin-top:8px;">save key & sort</button>
   </div>
 
-  <!-- AI loading state -->
+  <!-- AI loading -->
   <div id="ai-loading" class="ai-loading hidden">
-    <div class="spinner"></div> grouping by urgency…
+    <div class="spinner"></div> grouping by urgency...
   </div>
 
   <!-- Tab list -->
   <div id="tab-list"></div>
 
-  <!-- Bottom bar -->
+  <!-- Updated Footer with Clear ALL button -->
   <div class="footer">
     <button id="btn-pause" class="btn-ghost">pause prompts</button>
     <button id="btn-clear" class="btn-ghost">clear done</button>
+    <button id="btn-clear-all" class="btn-ghost" style="background:#ffe0e0; color:#e74c3c;">clear ALL tabs</button>
   </div>
 
   <script src="popup.js"></script>
